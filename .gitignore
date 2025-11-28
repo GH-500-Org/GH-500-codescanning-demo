@@ -2,6 +2,7 @@
 bin/
 obj/
 .vs/
+Properties/PublishProfiles/
 
 # Visual Studio
 .vscode/
@@ -9,7 +10,7 @@ obj/
 *.suo
 *.userosscache
 *.sln.docstates
-.vs
+*.vs/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -48,3 +49,5 @@ Desktop.ini
 
 # Linux
 *~
+
+Properties/ServiceDependencies/WebApp120251125110322 - Zip Deploy/profile.arm.json
