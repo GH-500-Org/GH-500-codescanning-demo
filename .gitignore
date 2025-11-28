@@ -1,0 +1,50 @@
+# .NET Core
+bin/
+obj/
+.vs/
+
+# Visual Studio
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Configuration
+appsettings.*.json
+
+# Logs
+*.log
+
+# npm Packages
+node_modules/
+
+# Publish Output
+publish/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Backup files
+*.bak
+*.swp
+
+# Recycle Bin
+$RECYCLE.BIN/
+
+# Windows image file caches
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
