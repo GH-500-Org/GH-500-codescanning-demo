@@ -58,7 +58,8 @@ namespace WebApp1.Pages
             // INTENTIONALLY VULNERABLE - for GHAS CodeQL demo. DO NOT USE IN PRODUCTION.
             if (!string.IsNullOrEmpty(secret))
             {
-                _logger.LogInformation("GHAS demo secret value received: {Secret}", secret);
+                var sanitizedSecret = secret.Replace("\r", "").Replace("\n", "");
+                _logger.LogInformation("GHAS demo secret value received: {Secret}", sanitizedSecret);
             }
 
             // INTENTIONALLY VULNERABLE - for GHAS CodeQL demo. DO NOT USE IN PRODUCTION.
