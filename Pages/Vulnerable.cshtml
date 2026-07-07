@@ -1,0 +1,28 @@
+@* INTENTIONALLY INSECURE - for GHAS CodeQL demo. DO NOT USE IN PRODUCTION. *@
+@page
+@model WebApp1.Pages.VulnerableModel
+@{
+    ViewData["Title"] = "Vulnerable Demo";
+}
+
+<div class="alert alert-danger" role="alert">
+    This page is intentionally insecure for GitHub Advanced Security demonstrations only. Do not copy this code into production applications.
+</div>
+
+<h1>Vulnerable GHAS Demo Page</h1>
+<p>Try query string inputs like <code>?msg=&lt;b&gt;xss&lt;/b&gt;&amp;file=/etc/hosts&amp;name=master&amp;hash=demo&amp;secret=fake-secret</code>.</p>
+
+<h2>Reflected Message</h2>
+@* INTENTIONALLY VULNERABLE - for GHAS CodeQL demo. DO NOT USE IN PRODUCTION. *@
+<div class="border rounded p-3 mb-3">
+    @Html.Raw(Model.Message)
+</div>
+
+<h2>Weak Hash Result</h2>
+<pre>@Model.WeakHash</pre>
+
+<h2>SQL Result</h2>
+<pre>@Model.SqlResult</pre>
+
+<h2>File Contents</h2>
+<pre>@Model.FileContents</pre>
