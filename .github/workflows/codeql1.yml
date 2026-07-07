@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '17 19 * * 4'
+    - cron: '21 22 * * 4'
 
 jobs:
   analyze:
@@ -43,6 +43,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
+        - language: actions
+          build-mode: none
         - language: csharp
           build-mode: none
         - language: javascript-typescript
