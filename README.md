@@ -8,7 +8,7 @@
 
 - The intentionally vulnerable Razor Page lives at `Pages/Vulnerable.cshtml` and `Pages/Vulnerable.cshtml.cs`.
 - Browse to `/Vulnerable` in a local run and use query string parameters to exercise the intentionally insecure sinks.
-- `.github/workflows/codeql.yml` is configured to analyze the repository with the `security-extended` and `security-and-quality` query suites for a richer demo.
+- `.github/workflows/codeql1.yml` is configured to analyze the repository with the `security-extended` query suite for a richer demo.
 
 ### Secret Scanning + Push Protection
 
