@@ -65,14 +65,15 @@ namespace WebApp1.Pages
             if (!string.IsNullOrEmpty(name))
             {
                 var connectionString = _configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
-                var unsafeSql = "SELECT name FROM sys.databases WHERE name = '" + name + "'";
+                var sql = "SELECT name FROM sys.databases WHERE name = @name";
 
                 try
                 {
                     using var connection = new SqlConnection(connectionString);
                     connection.Open();
 
-                    using var command = new SqlCommand(unsafeSql, connection);
+                    using var command = new SqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("@name", name);
                     using var reader = command.ExecuteReader();
 
                     if (reader.Read())
